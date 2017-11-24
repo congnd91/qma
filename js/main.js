@@ -1,4 +1,3 @@
-
 (function ($) {
     $(document).on('ready', function () {
         "use strict";
@@ -13,8 +12,7 @@
         win.on('scroll', function () {
             if ($(this).scrollTop() >= 100) {
                 $('.header').addClass("header-small");
-            }
-            else {
+            } else {
                 $('.header').removeClass("header-small");
             }
         });
@@ -28,8 +26,7 @@
             if ($(submenu).is(":visible")) {
                 $(submenu).slideUp();
                 $(this).removeClass("open-submenu-active");
-            }
-            else {
+            } else {
                 $(submenu).slideDown();
                 $(this).addClass("open-submenu-active");
             }
@@ -39,6 +36,35 @@
             //  return false;
         });
 
+
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            autoplay: true,
+            autoplaySpeed: 8000,
+            infinite: false,
+            pauseOnHover: false,
+            speed: 1000
+
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            arrows: false,
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true,
+            autoplay: true,
+            autoplaySpeed: 8000,
+            vertical: true,
+            infinite: false,
+            pauseOnHover: false,
+            speed: 1000
+        });
 
         var fancybox = $('.fancybox');
         if ($(fancybox).length) {
@@ -58,5 +84,5 @@
         }
     });
 
- 
+
 })(jQuery);

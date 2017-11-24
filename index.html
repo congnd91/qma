@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
 </head>
 
@@ -50,7 +51,7 @@
     </nav>
     <div id="page-loader"></div>
     <!--header-->
-    <header class="header">
+    <header class="header wow slideInDown" data-wow-duration="1.5s" data-wow-delay="6s">
         <div class="container-fluid">
             <div class="header-inner">
                 <a href="#" class="logo">
@@ -92,23 +93,90 @@
     <!--pager-->
     <div class="page">
         <!--video-->
-        <section class="home-video">
-            <img alt="" src="images/slider01.jpg" />
-            <div class="video-overlay">
-                <div class="video-caption">
-                    <h1 class="wow fadeIn" data-wow-duration="3s" data-wow-delay="1s"> Chez Qmama, <br /> Votre Terrain De Jeu !
-                    </h1>
-                    <p class="wow fadeIn" data-wow-duration="3s" data-wow-delay="1.5s">36 Large rooms, including 9 magnificent Junior Suites, <br /> the Presidential Suite "Chiola" of over 100 square meters,</p>
-                    <a href="#" class="wow fadeIn" data-wow-duration="3s" data-wow-delay="2s">
+        <section class="home-hero">
+            <section class="center slider-nav wow fadeIn" data-wow-duration="1.5s" data-wow-delay="5.5s">
+                <div class="nav-item">
+                    <span>01</span>
+                    <p> Nhà hàng</p>
+                </div>
+                <div class="nav-item">
+                    <span>02</span>
+                    <p> Câu lạc bộ thể thao trí tuệ</p>
+                </div>
+                <div class="nav-item">
+                    <span>03</span>
+                    <p>trò chơi có thưởng cho người nước ngoài</p>
+                </div>
+                <div class="nav-item">
+                    <p> <span>04</span> tư vấn đầu tư</p>
+                </div>
+                <div class="nav-item">
+                    <p> <span>05</span> bể bơi</p>
+                </div>
+                <div class="nav-item">
+                    <p> <span>06</span> spa và gym</p>
+                </div>
+                <div class="nav-item">
+                    <p> <span>07</span> khách sạn</p>
+                </div>
+
+            </section>
+
+
+            <section class="center slider-for">
+                <div class="slider-item" style="background-image: url(images/slider01.jpg)">
+                    <div class="hero-overlay">
+                        <div class="hero-caption">
+                            <div class="wow fadeIn" data-wow-duration="3s" data-wow-delay="4s">
+                                <h1> Nhìn xa trông rộng,
+                                    <br />phát triển vững bền
+                                </h1>
+                            </div>
+                            <p class="wow fadeIn" data-wow-duration="3s" data-wow-delay="4.5s">Chúng tôi nâng cao chất lượng cuộc sống bằng cách tạo ra mang đến cho khách hàng kinh nghiệm và giá trị thông qua các sản phẩm và dịch vụ chất lượng cao</p>
+                            <a href="#" class="wow fadeIn" data-wow-duration="3s" data-wow-delay="5s">
+                     câu chuyện của chúng tôi
+                      
+                    </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-item wow fadeIn" data-wow-duration="1.5s" style="background-image: url(images/tc1.jpg)">
+                    <div class="hero-overlay">
+                        <div class="hero-caption">
+                            <h1 class="wow fadeIn" data-wow-duration="3s" data-wow-delay="1s">> Votre Terrain De Jeu !
+                            </h1>
+                            <p class="wow fadeIn" data-wow-duration="3s" data-wow-delay="1.5s">ent Junior Suites, <br /> the Presidential Suite "Chiola" of over 100 square meters,</p>
+                            <a href="#" class="wow fadeIn" data-wow-duration="3s" data-wow-delay="2s">
                         Our Story 
                         <span>&nbsp; </span>
                         <i class="fa fa-caret-right"></i>
                     </a>
+                        </div>
+                        <div class="scroll">
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll">
+                <div class="slider-item" style="background-image: url(images/slider01.jpg)">
+
                 </div>
-            </div>
-            <div class="line-section wow fadeInDown" data-wow-duration="1s" data-wow-delay="2s"></div>
+                <div class="slider-item" style="background-image: url(images/slider01.jpg)">
+
+                </div>
+                <div class="slider-item" style="background-image: url(images/tc1.jpg)">
+
+                </div>
+                <div class="slider-item" style="background-image: url(images/slider01.jpg)">
+
+                </div>
+                <div class="slider-item" style="background-image: url(images/slider01.jpg)">
+
+                </div>
+
+            </section>
+
+
+            <div class="line-section wow fadeInDown" data-wow-duration="1s" data-wow-delay="4s"></div>
         </section>
         <!--passport-->
         <section class="passport">
@@ -375,6 +443,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
 
 </body>
