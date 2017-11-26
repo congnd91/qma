@@ -74,7 +74,7 @@ body {
     .col-grid {
         float: left;
         width: 16.66667%;
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid #e6e6e6;
         -webkit-animation-duration: 1.5s;
         animation-duration: 2.5s;
 
@@ -885,7 +885,7 @@ iframe {
 
     }
     .line {
-        margin: 0px 0px 10px 15px;
+        margin: 0px 0px 10px 30px;
         height: 5px;
         width: 100px;
         background-color: $active-color;
@@ -894,6 +894,7 @@ iframe {
         @media screen and (max-width: 1199px) {
 
             height: 3px;
+            margin: 0px 0px 10px 15px;
 
         }
 
@@ -914,6 +915,10 @@ iframe {
                 @media screen and (max-width: 1199px) {
                     font-size:20px;
                 }
+
+                @media screen and (max-width: 767px) {
+                    font-size: 14px;
+                }
             }
 
             h2 {
@@ -924,6 +929,9 @@ iframe {
                 @include text-re();
                 @media screen and (max-width: 1199px) {
                     font-size:20px;
+                }
+                @media screen and (max-width: 767px) {
+                    font-size: 14px;
                 }
 
 
@@ -962,15 +970,83 @@ iframe {
     }
 }
 
+.section-caption {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 99;
+    .sc-line {
+        height: 5px;
+        width: 100px;
+        background-color: $active-color;
+        background-image: -webkit-linear-gradient(0deg, $active-color, $active-color-second);
+        float: left;
+        margin: 30px 30px 0px 30px;
+        @media screen and (max-width: 767px) {
+            height: 3px;
+            margin: 15px 20px 0px 20px;
+            width: 40px;
+        }
+    }
+
+
+
+    h2 {
+        font-size: 30px;
+        font-weight: 900;
+        float: left;
+        margin: 0px;
+        text-transform: uppercase;
+        span {
+            margin: 0px;
+            display: block;
+            font-weight: 900;
+            color: #fff;
+            &.text-black {
+                color: $text-color;
+            }
+
+        }
+        strong {
+            @include text-re();
+            font-weight: 900;
+
+        }
+        @media screen and (max-width: 1600px) {
+            font-size: 20px;
+
+        }
+
+        @media screen and (max-width: 1199px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
+
+
+    }
+
+
+}
+
 .project {
-    min-height: 100%;
+    min-height: 1000px;
     position: relative;
     background-color: #fff;
-    z-index: 99;
     width: 100%;
     position: relative;
-    border: 1px solid lime;
     background-color: #000;
+
+    @media screen and (max-width: 1199px) {
+
+        min-height: 600px;
+    }
+    @media screen and (max-width: 767px) {
+
+        min-height: 400px;
+    }
+
 
     .gallery-top {
         min-height: 100%;
@@ -982,6 +1058,7 @@ iframe {
             min-height: 100%;
             .swiper-slide {
                 min-height: 100%;
+                background-size: cover;
             }
         }
     }
@@ -992,15 +1069,31 @@ iframe {
         bottom: 100px;
         right: 200px;
         width: 250px !important;
-        height: 300px;
         z-index: 999;
+        @media screen and (max-width: 1400px) {
+
+            bottom: 60px;
+            right: 100px;
+            width: 250px !important;
+        }
+
+        @media screen and (max-width: 1199px) {
+
+            bottom: 30px;
+            right: 0px;
+            width: 250px !important;
+        }
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
 
         p {
             color: #fff;
             font-size: 20px;
             display: block;
             text-align: left !important;
-            margin: 0px;
+            margin: 20px 0px;
             position: relative !important;
             height: auto !important;
             transform: none !important;
@@ -1072,113 +1165,226 @@ iframe {
     .gallery-thumbs .swiper-slide-active {
         opacity: 1;
     }
+    .project-item-caption {
 
-}
+        position: absolute;
+        max-width: 700px;
+        padding: 20px;
+        background-color: #000;
+        bottom: 300px;
+        left: 200px;
+        z-index: 99;
 
-.s-right {
-    position: relative;
-    z-index: 2;
-
-    ul {
-        list-style: none;
-        padding: 0px;
-        margin: 120px 0px 0px 70px;
+        @media screen and (max-width: 1400px) {
+            max-width: 500px;
+            left: 100px;
+            bottom: 200px;
+        }
         @media screen and (max-width: 1199px) {
-            margin:40px 0px 0px 30px;
+            max-width: 400px;
+            left: 30px;
+            bottom: 50px;
         }
-        @media screen and (max-width: 991px) {
-            margin: -20px 0px 0px 30px;
-        }
-        @media screen and (max-width: 767px) {
-            margin: 10px 0px 0px 0px;
-            padding: 0px 10px;
-            text-align: center;
-        }
+        h3 {
+            font-size: 30px;
+            font-weight: 900;
 
-        li {
-            margin: 15px 0px;
-            @media screen and (max-width: 767px) {
-                margin:5px 10px;
-                display: inline-block;
-
-            }
-            a {
-                display: block;
-                font-family: $font-family-heading;
-                @include transition();
-                font-size: 15px;
-                cursor: pointer;
-                @media screen and (max-width: 767px) {
-                    font-size:12px;
-                }
-
-            }
-            &:hover {
-                a {
-
-
-                    color: $active-color;
-                }
-            }
-            &.current {
-                color: $active-color;
-            }
-        }
-    }
-
-}
-
-.s-control {
-    padding: 30px 0px 10px 0px;
-    text-align: center;
-}
-
-.media {
-
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 600px;
-    padding: 80px 0px;
-    @media screen and (max-width: 991px) {
-        padding:40px 0px;
-
-    }
-    h2 {
-        font-size: 50px;
-        margin: 0px 0px 40px 0px;
-        color: #ececec;
-        @media screen and (max-width: 991px) {
-            font-size:30px;
-            margin: 0px 0px 20px 0px;
-
-        }
-    }
-
-    .m-item {
-        padding: 30px 0px;
-        border-bottom: 1px solid #fff;
-        margin-right: 15px;
-        span {
-            display: block;
-            font-size: 13px;
-            color: #fff;
+            margin: 0px;
             text-transform: uppercase;
+            @include text-re();
+            @media screen and (max-width: 1199px) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+            }
+
+
+
         }
         p {
-            margin: 20px 0px 0px 0px;
-            a {
-                color: #fff;
-                @include transition();
-                font-size: 18px;
-                font-family: $font-family-heading;
-                &:hover {
-                    color: $active-color;
-                }
+
+            margin: 10px 0px 10px 0px;
+            font-size: 18px;
+            color: #fff;
+            @media screen and (max-width: 991px) {
+                font-size: 14px;
             }
         }
     }
+
 }
+
+.event {
+    position: relative;
+    padding: 80px 0px;
+
+    .section-caption {
+        left: 0px;
+        top: 80px;
+    }
+
+    .event-year {
+        position: absolute;
+        top: 80px;
+        right: 30px;
+        display: inline-block;
+        font-weight: 900;
+        color: #dedede;
+        font-size: 60px;
+        transform: rotate(-90deg);
+        @media screen and (max-width: 991px) {
+            font-size: 40px;
+            right: -20px;
+        }
+
+    }
+    p {
+
+        margin: 0px 0px 10px 0px;
+        font-size: 18px;
+        color: $text-color;
+        @media screen and (max-width: 991px) {
+            font-size: 14px;
+            margin: 50px 30px 0px 0px;
+
+        }
+    }
+}
+
+.ticket {
+    background-image: url(../images/tickit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #dad6d8;
+    min-height: 100px;
+    padding: 60px 0px 40px 0px;
+    position: relative;
+    z-index: 9;
+    .row {}
+    .ticket-caption {
+        margin: 0px 0px 20px 0px;
+        h3 {
+            font-size: 30px;
+            font-weight: 900;
+
+            margin: 0px;
+            text-transform: uppercase;
+            @include text-re();
+
+            @media screen and (max-width: 1600px) {
+                font-size: 20px;
+
+            }
+
+            @media screen and (max-width: 1199px) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+            }
+
+        }
+
+    }
+    .ticket-des {
+
+        p {
+
+            margin: 0px 0px 10px 0px;
+            font-size: 18px;
+            color: $text-color;
+            @media screen and (max-width: 991px) {
+                font-size: 14px;
+                margin: 50px 30px 0px 0px;
+
+            }
+        }
+        a {
+            font-size: 18px;
+            display: inline-block;
+            margin: 30px 0px 0px 0px;
+            text-decoration: underline;
+            color: $text-color;
+            @include transition();
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: $font-family-heading;
+            &:hover {
+                color: $active-color;
+
+            }
+
+        }
+    }
+    .avatar-item {
+        margin: 20px 0px;
+        width: 120px;
+        text-align: center;
+
+        @media screen and (max-width: 1500px) {
+            width: 90px;
+        }
+        .avatar {
+            display: block;
+
+
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0px 0px 0px;
+            text-decoration: underline;
+            color: $text-color;
+            @include transition();
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: $font-family-heading;
+            &:hover {
+                color: $active-color;
+
+            }
+
+        }
+
+
+    }
+    .ticket-cap-vertical {
+        height: 300px;
+        margin: 30px 0px 0px 20px;
+        position: relative;
+        width: 30px;
+        p {
+            color: #a2a3a6;
+            display: inline-block;
+            margin: 0px;
+            font-size: 24px;
+            @include transition();
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: $font-family-heading;
+            transform: rotate(90deg);
+            position: absolute;
+            bottom: 0px;
+            left: -135px;
+            top: 135px;
+            height: 30px;
+            text-align: center;
+            width: 300px;
+
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
 
 .footer {
     padding: 70px 0px;
@@ -1211,36 +1417,10 @@ iframe {
             @include transition();
             &:hover {
                 color: $active-color;
+
             }
+
         }
     }
 
 }
-
-.nav-footer {
-    text-align: center;
-    margin: 10px 0px;
-    ul {
-        list-style: none;
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-        li {
-            display: inline-block;
-            margin: 0px 3px;
-            a {
-                text-transform: uppercase;
-                font-size: 11px;
-                &:hover {
-                    text-decoration: underline;
-                }
-
-            }
-            span {
-                color: #666;
-            }
-        }
-    }
-}
-
-.page {}
