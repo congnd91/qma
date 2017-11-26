@@ -45,9 +45,10 @@
             asNavFor: '.slider-nav',
             autoplay: true,
             autoplaySpeed: 8000,
-            infinite: false,
+
             pauseOnHover: false,
-            speed: 1000
+            speed: 2000,
+
 
         });
         $('.slider-nav').slick({
@@ -56,15 +57,44 @@
             asNavFor: '.slider-for',
             arrows: false,
             dots: false,
-            centerMode: false,
+            centerMode: true,
             focusOnSelect: true,
             autoplay: true,
             autoplaySpeed: 8000,
             vertical: true,
-            infinite: false,
+
             pauseOnHover: false,
-            speed: 1000
+            speed: 2000,
+            focusOnSelect: true,
+
         });
+
+        var names = [];
+        $(".gallery-top .swiper-slide").each(function (i) {
+            names.push($(this).data("name"));
+
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            effect: 'fade',
+            pagination: {
+
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<p class="' + className + '" >' + names[index] + '</p>';
+                },
+            },
+
+
+
+        });
+
+        console.log(names[0])
+
+
+
 
         var fancybox = $('.fancybox');
         if ($(fancybox).length) {

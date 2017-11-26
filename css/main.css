@@ -82,7 +82,7 @@ body {
     -webkit-animation-duration: 1.5s;
     animation-duration: 2.5s;
     animation-name: cover-grid;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: both; }
     .cover-grid .col-grid.col-grid-2 {
       animation-delay: 2.2s; }
@@ -164,6 +164,9 @@ iframe {
   background: #f0c12b;
   color: #fff; }
 
+.container-fluid-1600 {
+  max-width: 1600px; }
+
 /*==========Components=========*/
 .my-btn {
   display: inline-block;
@@ -236,7 +239,8 @@ iframe {
     align-items: center; }
     @media screen and (max-width: 1400px) {
       .home-hero .slider-nav {
-        width: 300px; } }
+        width: 300px;
+        top: 50px; } }
     @media screen and (max-width: 991px) {
       .home-hero .slider-nav {
         display: none; } }
@@ -354,7 +358,8 @@ iframe {
         font-weight: 900;
         line-height: 70px;
         border-radius: 5px;
-        padding: 0px 50px; }
+        padding: 0px 50px;
+        text-transform: uppercase; }
         @media screen and (max-width: 1199px) {
           .home-hero .hero-overlay .hero-caption a {
             line-height: 50px; } }
@@ -648,175 +653,158 @@ iframe {
   width: 1px;
   z-index: 99;
   background-color: #f0c12b; }
+  @media screen and (max-width: 991px) {
+    .line-section {
+      height: 60px;
+      border: -30px; } }
 
-.passport {
-  background-image: url(../images/bg1.png);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 600px;
-  padding: 40px 0px;
-  position: relative; }
-  .passport .container {
-    overflow: hidden; }
-
-.section-caption {
-  text-align: center;
-  padding: 40px 0px; }
-  .section-caption img {
-    max-width: 100%; }
-  .section-caption p {
-    margin: 10px 0px 0px 0px;
-    font-size: 15px;
-    font-weight: 500; }
-
-.passport-left h3 {
-  margin: 30px 0px 50px 0px;
-  font-size: 22px; }
-  @media screen and (max-width: 767px) {
-    .passport-left h3 {
-      margin: 10px 0px 20px 0px; } }
-
-.passport-left ul {
-  padding: 0px;
-  list-style: none;
-  margin-bottom: 20px; }
-  .passport-left ul li {
-    border-bottom: 1px solid #dfdfdf;
-    padding: 15px 0px 15px 200px;
-    min-height: 55px; }
-    @media screen and (max-width: 767px) {
-      .passport-left ul li {
-        padding: 10px 0px 10px 150px; } }
-    .passport-left ul li span {
-      float: left;
-      width: 200px;
-      margin: 0px 0px 0px -200px;
-      text-transform: uppercase;
-      font-weight: 500; }
-      @media screen and (max-width: 767px) {
-        .passport-left ul li span {
-          font-size: 13px;
-          width: 150px;
-          margin: 0px 0px 0px -150px; } }
-    .passport-left ul li p {
-      margin: 0px;
-      font-size: 15px; }
-      @media screen and (max-width: 767px) {
-        .passport-left ul li p {
-          font-size: 13px; } }
-
-.service h3 {
-  margin: 40px 0px 20px 0px;
-  font-size: 22px; }
-
-.service p {
-  margin: 0px 0px 20px 0px;
-  font-size: 15px; }
-
-.service-row {
-  margin: 0px -2px; }
-  .service-row .service-col {
-    width: 20%;
-    float: left;
-    padding: 0px 2px;
-    min-height: 100px; }
-    @media screen and (max-width: 767px) {
-      .service-row .service-col {
-        width: 33.33%; }
-        .service-row .service-col.service-col-fix {
-          width: 50%; }
-          .service-row .service-col.service-col-fix .service-item-fix {
-            margin-top: 2px; } }
-    .service-row .service-col .service-item {
-      position: relative;
-      overflow: hidden; }
-      .service-row .service-col .service-item.margin-top {
-        margin-top: 4px; }
-      .service-row .service-col .service-item p {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        bottom: 0px;
-        right: 0px;
-        text-align: center; }
-        .service-row .service-col .service-item p a {
-          color: #fff;
-          font-family: "Montserrat", sans-serif;
-          position: absolute;
-          display: block;
-          top: 50%;
-          left: 0px;
-          right: 0px;
-          margin-top: -10px;
-          -moz-transition: all ease 0.5s;
-          -o-transition: all ease 0.5s;
-          -webkit-transition: all ease 0.5s;
-          transition: all ease 0.5s;
-          font-size: 18px; }
-          @media screen and (max-width: 767px) {
-            .service-row .service-col .service-item p a {
-              font-size: 13px; } }
-      .service-row .service-col .service-item img {
-        display: block;
-        width: 100%;
-        -moz-transition: all ease 0.5s;
-        -o-transition: all ease 0.5s;
-        -webkit-transition: all ease 0.5s;
-        transition: all ease 0.5s;
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2); }
-      .service-row .service-col .service-item:hover img {
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1); }
-      .service-row .service-col .service-item:hover a {
-        color: #f0c12b; }
-
-.spotlight {
-  background-image: url(../images/spotlight_bg.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 600px;
-  padding: 40px 0px; }
-
-.s-left {
+.letter {
+  min-height: 100%;
   position: relative;
-  z-index: 2; }
-  .s-left h4 {
-    font-size: 30px;
-    margin: 150px 0px 0px 0px; }
-    @media screen and (max-width: 991px) {
-      .s-left h4 {
-        font-size: 20px;
-        margin: 70px 0px 0px 0px; } }
-
-.s-image {
+  background-color: #fff;
+  z-index: 99;
+  width: 100%;
   position: relative;
-  z-index: 1; }
-  .s-image img {
-    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.5); }
-  .s-image .s-text {
-    position: absolute;
-    top: 20px;
-    margin: 0px;
-    left: 82%;
-    font-family: "Montserrat", sans-serif;
-    color: #eaedf1;
-    font-size: 130px;
-    display: block; }
+  padding: 150px 0px;
+  background-image: url(../images/ceo_bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 1199px) {
+    .letter {
+      padding: 60px 0px; } }
+  @media screen and (max-width: 991px) {
+    .letter {
+      padding: 30px 0px; } }
+  .letter .line {
+    margin: 0px 0px 10px 15px;
+    height: 5px;
+    width: 100px;
+    background-color: #f0c12b;
+    background-image: -webkit-linear-gradient(0deg, #f0c12b, #967918); }
     @media screen and (max-width: 1199px) {
-      .s-image .s-text {
-        font-size: 80px; } }
-    @media screen and (max-width: 991px) {
-      .s-image .s-text {
-        display: none; } }
+      .letter .line {
+        height: 3px; } }
+  .letter .letter-caption {
+    text-align: center; }
+    .letter .letter-caption div {
+      display: inline-block;
+      text-align: left; }
+      .letter .letter-caption div p {
+        margin: 0px;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #231f20; }
+        @media screen and (max-width: 1199px) {
+          .letter .letter-caption div p {
+            font-size: 20px; } }
+      .letter .letter-caption div h2 {
+        margin: 0px;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #f0c12b;
+        background: -webkit-linear-gradient(0deg, #967918, #f0c12b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block; }
+        @media screen and (max-width: 1199px) {
+          .letter .letter-caption div h2 {
+            font-size: 20px; } }
+  .letter .letter-content {
+    padding: 50px 0px 0px 0px; }
+    .letter .letter-content p {
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      margin: 15px 0px; }
+      .letter .letter-content p.sapo {
+        font-weight: 500; }
+      @media screen and (max-width: 1400px) {
+        .letter .letter-content p {
+          font-size: 18px; } }
+      @media screen and (max-width: 991px) {
+        .letter .letter-content p {
+          font-size: 14px; } }
+      .letter .letter-content p.sing {
+        font-weight: 600;
+        font-style: normal; }
+
+.project {
+  min-height: 100%;
+  position: relative;
+  background-color: #fff;
+  z-index: 99;
+  width: 100%;
+  position: relative;
+  border: 1px solid lime;
+  background-color: #000; }
+  .project .gallery-top {
+    min-height: 100%;
+    position: absolute;
+    width: 100%; }
+    .project .gallery-top .swiper-wrapper {
+      position: absolute;
+      height: 100%;
+      min-height: 100%; }
+      .project .gallery-top .swiper-wrapper .swiper-slide {
+        min-height: 100%; }
+  .project .swiper-pagination {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    width: 250px !important;
+    height: 300px;
+    z-index: 999; }
+    .project .swiper-pagination p {
+      color: #fff;
+      font-size: 20px;
+      display: block;
+      text-align: left !important;
+      margin: 0px;
+      position: relative !important;
+      height: auto !important;
+      transform: none !important;
+      left: unset !important;
+      width: 100% !important;
+      border-radius: 0px !important;
+      background-color: transparent !important;
+      padding: 0px 0px 0px 30px;
+      opacity: 1 !important; }
+      .project .swiper-pagination p:before {
+        width: 20px;
+        height: 20px;
+        content: "";
+        display: block;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0);
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        z-index: 1; }
+      .project .swiper-pagination p:after {
+        width: 10px;
+        height: 10px;
+        content: "";
+        display: block;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        z-index: 2; }
+      .project .swiper-pagination p.swiper-pagination-bullet-active:before {
+        background-color: rgba(255, 255, 255, 0.2); }
+  .project .gallery-thumbs .swiper-slide {
+    width: 100%;
+    border: 1px solid red;
+    height: 40px;
+    color: #fff;
+    font-size: 30px; }
+    .project .gallery-thumbs .swiper-slide.swiper-slide-active {
+      border: 1px solid lime; }
+  .project .gallery-thumbs .swiper-slide-active {
+    opacity: 1; }
 
 .s-right {
   position: relative;
@@ -864,7 +852,6 @@ iframe {
   text-align: center; }
 
 .media {
-  background-image: url(../images/media_bg.jpg);
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
