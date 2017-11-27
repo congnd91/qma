@@ -91,7 +91,27 @@
 
         });
 
-        console.log(names[0])
+        var post_slider = new Swiper('.swiper-post', {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+            loop: true,
+            navigation: {
+                nextEl: '.post-next',
+                prevEl: '.post-prev',
+            },
+            breakpoints: {
+                1400: {
+                    spaceBetween: 30,
+                },
+                991: {
+                    spaceBetween: 15,
+                }
+            }
+
+        });
+
+
+
 
 
 
